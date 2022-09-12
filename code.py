@@ -36,3 +36,9 @@ combined_df.to_csv('data/combined_df.csv')
 combined_df.shape
 
 patient_zip = pd.read_csv('data/patient_zip.csv')
+
+#concat
+neighborhood_small_sample = df_neighborhood_small.sample(10)
+patients_small_sample = df_patients_small.sample(10)
+
+concat = pd.concat([neighborhood_small_sample, patients_small_sample])
