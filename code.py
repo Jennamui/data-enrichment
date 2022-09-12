@@ -20,3 +20,13 @@ df_neighborhood_small = [['ZIPID','ADI_NATRANK','ADI_STATERNK']]
 print(df_neighborhood_small.sample(10).to_markdown())
 list(df_neighborhood_small)
 df_neighborhood_small.shape 
+
+combined_df = df_patients_small.merge(df_neighborhood_small, how='left', left_on='Zip_Code_3_digits', right_on='ZIPID')
+combined_df = pd.merge(df_patients_small, df_neighborhood_small, how='left', left_on='Zip_Code_3_digits', right_on='ZIPID')
+
+combined_df.columns
+### save to csv 
+combined_df.to_csv('data/combined_df.csv')
+combined_df.shape
+
+patient_zip = pd.read_csv('data/patient_zip.csv')
