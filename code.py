@@ -16,7 +16,7 @@ print(df_patients_small.sample(10).to_markdown())
 list(df_patients_small)
 df_patients_small.shape
 
-df_neighborhood_small = [['ZIPID','ADI_NATRANK','ADI_STATERNK']]
+df_neighborhood_small = [['ZIPID']]
 print(df_neighborhood_small.sample(10).to_markdown())
 list(df_neighborhood_small)
 df_neighborhood_small.shape 
